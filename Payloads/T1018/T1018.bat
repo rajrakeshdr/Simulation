@@ -11,6 +11,6 @@ ECHO -------------------------------------------------------------------
 net view /domain
 net view
 arp -a
-for /l %i in (1,1,254) do ping -n 1 -w 100 192.168.11.%i
+for /l %%i in (1,1,254) do ping -n 1 -w 100 192.168.11.%%i
 ECHO.
 
