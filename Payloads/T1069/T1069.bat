@@ -12,6 +12,6 @@ cmd.exe /c net localgroup administrators >> %EXFIL%\out_T1069.txt
 net localgroup
 net group /domain
 powershell get-localgroup
-powershell get-ADPrinicipalGroupMembership administrator | select name
+powershell.exe -Command "Get-ADPrincipalGroupMembership administrator | Select-Object Name"
 ECHO.
 
