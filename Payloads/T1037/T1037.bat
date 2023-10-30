@@ -17,5 +17,5 @@ ECHO Technique: Logon Scripts	(T1037)
 ECHO.
 ECHO [+] userinit
 ECHO -------------------------------------------------------------------
-cmd \c C:\Windows\System32\userinit.exe
+C:\Windows\System32\userinit.exe
 ECHO.
