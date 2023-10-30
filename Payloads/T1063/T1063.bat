@@ -18,10 +18,10 @@ ECHO.
 
 ECHO [+] Discovery of AV using Powershell 
 ECHO -------------------------------------------------------------------
-powershell get-process | ?{$_.Description -like "*virus*"}
-powershell get-process | ?{$_.Description -like "*carbonblack*"}
-powershell get-process | ?{$_.Description -like "*defender*"}
-powershell get-process | ?{$_.Description -like "*cylance*"}
+powershell -Command "get-process | ?{$_.Description -like '*virus*'}"
+powershell -Command "get-process | ?{$_.Description -like '*carbonblack*'}"
+powershell -Command "get-process | ?{$_.Description -like '*defender*'}"
+powershell -Command "get-process | ?{$_.Description -like '*cylance*'}"
 ECHO.
 
 ECHO [+] Discovery of installed Sysmon Driver  
