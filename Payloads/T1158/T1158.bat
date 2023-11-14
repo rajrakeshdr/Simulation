@@ -26,6 +26,6 @@ ECHO.
 ECHO [+] Using PowerShell fot ADS 
 ECHO -------------------------------------------------------------------
 echo "test" > %EXFIL%T1158.txt 
-powershell -ep bypass set-content -path %EXFIL%T1158.txt -stream adstest.txt -value "T1158"; set-content -path %EXFIL%T1158.txt -stream adstest.txt -value "test2"; bypass set-content -path %EXFIL% -stream adstest.txt -value "test3"
+powershell -ep bypass set-content -path %EXFIL%T1158.txt -stream adstest.txt -value "T1158"; set-content -path %EXFIL%T1158.txt -stream adstest.txt -value "test2"; set-content -path %EXFIL% -stream adstest.txt -value "test3"
 powershell -ep bypass "ls -Recurse | %{gi $_.Fullname -stream *} | where stream -ne ':$Data' | Select-Object pschildname"
 ECHO.
