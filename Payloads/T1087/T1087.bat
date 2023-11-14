@@ -12,8 +12,8 @@ net user
 net user /domain
 dir c:\Users\
 cmd /c cmdkey.exe /list
-cmd /k net localgroup "Users"
-cmd /k net localgroup
+cmd.exe /c net localgroup "Users"
+cmd.exe /c net localgroup
 cmd.exe /c net group \"Domain Admins\" /domain
 cmd.exe /c net user
 cmd.exe /c net user /domain
