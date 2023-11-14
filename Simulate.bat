@@ -13,7 +13,7 @@ ECHO.
 ECHO ===========================================================================
 ECHO Disabling Windows Defender : RealTime Monitoring/IOAVProtection/ScriptScanning
 ECHO.
-cmd /c powershell Set-MpPreference -DisableIntrusionPreventionSystem $true -DisableIOAVProtection $true -DisableRealtimeMonitoring $true -DisableScriptScanning $true
+::cmd /c powershell Set-MpPreference -DisableIntrusionPreventionSystem $true -DisableIOAVProtection $true -DisableRealtimeMonitoring $true -DisableScriptScanning $true
 ECHO.
 ECHO ===========================================================================
 ECHO Preparing Working Directories '%RootDir%'
