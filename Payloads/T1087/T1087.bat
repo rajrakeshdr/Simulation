@@ -49,7 +49,7 @@ ECHO.
 
 ECHO [+] Discovery using other utilities
 ECHO -------------------------------------------------------------------
-query user
+cmd.exe /c query user
 cmd.exe /c C:\\tools\win32bins\\activedirectory\\dsquery server
 cmd.exe /c C:\\tools\win32bins\\activedirectory\\dsquery user -name smith* | C:\\tools\win32bins\\activedirectory\\dsget user -dn -desc
 ECHO.
