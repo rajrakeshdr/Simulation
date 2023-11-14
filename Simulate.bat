@@ -33,7 +33,7 @@ SET PAYLOAD=%RootDir%\Payloads\
 SET APTDIR=%RootDir%
 :: Sleep Interval
 SET SINTERVAL=ON
-SET SECONDMAX=1
+SET SECONDMAX=15
 xcopy /S /Y Payloads %PAYLOAD%
 xcopy /S /Y Utilities %Utilities%
 ECHO.
